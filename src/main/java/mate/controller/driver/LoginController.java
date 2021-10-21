@@ -2,7 +2,6 @@ package mate.controller.driver;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,7 +13,6 @@ import mate.service.AuthenticationService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@WebServlet(urlPatterns = "/login")
 public class LoginController extends HttpServlet {
     private static Logger logger = LogManager.getLogger(LoginController.class);
     private static final String SESSION_ATTRIBUTE_ID = "driver_id";
@@ -41,7 +39,7 @@ public class LoginController extends HttpServlet {
                     + "; Driver successfully logged. Driver Id: " + driver.getId());
             resp.sendRedirect("/index");
         } catch (AuthenticationException e) {
-            logger.warn("SessionId: " + session.getId()
+            logger.error("SessionId: " + session.getId()
                     + "; Driver with login and password not found");
             req.setAttribute("errorMsg",e.getMessage());
             req.getRequestDispatcher("/WEB-INF/views/drivers/login.jsp").forward(req,resp);

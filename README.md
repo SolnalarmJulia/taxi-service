@@ -19,7 +19,8 @@ request, return data to user.
    3. Input values to mate.util.ConnectionUtil for connecting with MySql DB;
    4. Install [Tomcat](https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.50/bin/)
          - add Tomcat configuration
-   5.Run Tomcat.   
+         
+   5. Run Tomcat.   
    
 ## Technologies, tools
 
