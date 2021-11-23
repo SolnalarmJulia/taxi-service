@@ -9,10 +9,6 @@ request, return data to user.
 ## Installing
    1. Install [IntelliJ IDEA Ultimate](https://www.jetbrains.com/ru-ru/idea/download)
          - fork taxi-service project;
-         - create a copy of taxi-service repository:
-            
-            
-            git clone https://github.com/SolnalarmJulia/taxi-service.git
    2. Install [MySgl DB](https://dev.mysql.com/doc/refman/8.0/en/installing.html)
          - creating a [new MySQL Connection](https://dev.mysql.com/doc/workbench/en/wb-getting-started-tutorial-create-connection.html)
          - run scripts in MySql DB from [init.db.sql](init_db.sql);
